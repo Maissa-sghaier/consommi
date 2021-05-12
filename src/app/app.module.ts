@@ -14,6 +14,7 @@ import { DeliverymethodDetailsComponent } from './deliverymethod-details/deliver
 import { DeliverymethodListComponent } from './deliverymethod-list/deliverymethod-list.component';
 import { UpdateDeliverymethodComponent } from './update-deliverymethod/update-deliverymethod.component';
 import { CartManagementComponent } from './cart-management/cart-management.component';
+import { OrderManagementComponent } from './order-management/order-management.component';
 
 
 
@@ -29,6 +30,7 @@ import { CartManagementComponent } from './cart-management/cart-management.compo
     DeliverymethodListComponent,
     UpdateDeliverymethodComponent,
     CartManagementComponent,
+    OrderManagementComponent,
   
   ],
   imports: [
