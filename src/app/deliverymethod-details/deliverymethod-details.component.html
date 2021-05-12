@@ -1,0 +1,20 @@
+<h2>DeliveryMethod Details</h2> 
+
+<hr/>
+<div *ngIf="deliverymethod">
+  <div>
+    <label><b>Id: </b></label> {{deliverymethod.id}}
+  </div>
+  <div>
+    <label><b>Fees: </b></label> {{deliverymethod.fees}}
+  </div>
+  <div>
+    <label><b>Type: </b></label> {{deliverymethod.type}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to DeliveryMethod List</button><br>
+
+

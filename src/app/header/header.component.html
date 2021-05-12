@@ -1,0 +1,150 @@
+<header>
+    <div class="header-area black-bg">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="show-mobile-menu d-block d-md-none"></div>
+                <nav class="main-menu text-center d-none d-md-block" id="mobile-menu">
+                    <ul>
+                        <li><img src="assets/img/site-logo.png" alt=""></li>
+                        <li><a routerLink='/home'>Home </a></li>
+                        <li class=""><a href="shop.html">Categories<i class="fas fa-angle-down"></i></a>
+                            <ul class="row mega-menu">
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Categories 01</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">cocktail</a></li>
+                                            <li><a href="#">day</a></li>
+                                            <li><a href="#">evening</a></li>
+                                            <li><a href="#">sports</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Categories 02</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">sorts</a></li>
+                                            <li><a href="#">Run</a></li>
+                                            <li><a href="#">sandals</a></li>
+                                            <li><a href="#">books</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Categories 03</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">blazers</a></li>
+                                            <li><a href="#">coat</a></li>
+                                            <li><a href="#">table</a></li>
+                                            <li><a href="#">kids</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mega-menu-banner">
+                                        <a href="#"><img src="assets/img/menu-img/right-menu.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="feature "><a class="navbar-brand mb-0" routerLink='/add'>Products <i class="fas fa-angle-down"></i></a>
+                           
+                          <ul class="row mega-menu">
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Footwear Man</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">gold Rings</a></li>
+                                            <li><a href="#">Platinum Rings</a></li>
+                                            <li><a href="#">Silver Rings</a></li>
+                                            <li><a href="#">tungsten Rings</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Footwear Man</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">gold Brands</a></li>
+                                            <li><a href="#">Platinum Brands</a></li>
+                                            <li><a href="#">Silver Brands</a></li>
+                                            <li><a href="#">Tungsten Brands</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Footwear Man</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">Bracelets</a></li>
+                                            <li><a href="#">Gold Rings</a></li>
+                                            <li><a href="#">Platinum Rings</a></li>
+                                            <li><a href="#">Silver Rings</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-3">
+                                    <li class="mega-menu-title"><a href="javascript:void(0)">Brands</a>
+                                        <ul class="mega-menu-inner">
+                                            <li><a href="#">necklaces</a></li>
+                                            <li><a href="#">Gold Rings</a></li>
+                                            <li><a href="#">Platinum Rings</a></li>
+                                            <li><a href="#">Silver Rings</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blog</a></li>
+                        
+                        <li><a href="#">event <i class="fas fa-angle-down"></i></a>
+
+                            <ul class="submenu">
+                                <li><a href="checkEvent.html">Check Events</a></li>
+                                <li><a href="CheckpassedEvents.html">Check passed Events</a></li>
+                                <li><a href="CheckupcomingEvents">Check upcoming Events</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li>
+                            <ul class="header-top-right mb-20">
+                                <li data-toggle="modal" data-target="#searchModal"><a href="javascript:void(0)"><i class="fas fa-search"></i></a></li>
+                                <li class="user"><a href="#"><i class="fas fa-user"></i></a>
+                                    <ul class="hover-toggle">
+                                        <li><a href="#">MyAccount</a></li>
+                                        <li><a href="wishlist.html">MyWishlist</a></li>
+                                        <li><a href="cart.html">MyCart</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="#">Log In</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cart"><i class="fas fa-shopping-cart"></i><span class="total-cart" (click)="hovering()">{{itemsCount}}</span>
+                                    <ul class="hover-toggle" >
+                                        <li  *ngFor= "let item of cartitems">
+                                            <div class="cart-img img-styling ">
+                                                <img src="assets/img/71nfq-womens-cr-pumpkinmulti-esi-crinkle-midi-tea-dress.jpg" >
+                                            </div>
+                                            <div class="cart-content">
+                                                <span>{{item.productname}}</span>
+                                                <div class="price">
+                                                   <span>{{item.price}}</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li>
+                                            <div class="sub-total">
+                                                <span>Subtotal</span>
+                                                <span class="total">$205.00</span>
+                                            </div>
+                                        </li>
+                                           <div class="mini-cart-btn">
+                                                <a href="cart.html" class="border-btn">View Cart <i class="fas fa-angle-right"></i></a>
+                                                <a href="cart.html" class="border-btn">View Cart <i class="fas fa-angle-right"></i></a>
+                                           </div>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>     
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

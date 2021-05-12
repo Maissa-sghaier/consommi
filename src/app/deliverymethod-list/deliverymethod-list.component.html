@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>DeliveyMetod List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Fees</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let deliverymethod of deliverymethods | async">
+            <td>{{deliverymethod.id}}</td>
+            <td>{{deliverymethod.fees}}</td>
+            <td>{{deliverymethod.type}}</td>
+            <td><button (click)="deleteDeliverym(deliverymethod.id)" class="btn btn-danger">Delete</button>
+                <button (click)="deliverymDetails(deliverymethod.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+

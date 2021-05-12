@@ -1,0 +1,35 @@
+<div class="table-responsive  table-hover">
+<table class="table ">
+    <thead class=" head-styling ">
+        <tr   class=" text-center text-uppercase ">
+            <th >image</th>
+            <th >article</th>
+            <th >quantity</th>
+            <th >total price</th>
+            <th >action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  class="text-center text-muted " *ngFor= "let item of cartitems">
+            <th><img  class="img-styling" src="assets/img/71nfq-womens-cr-pumpkinmulti-esi-crinkle-midi-tea-dress.jpg" ></th>
+            <th  >{{item.productname}}</th>
+            <th >
+                <button class="btn" (click)= "updateProductQuantity(item.id,item.productname,(-1))"><img src="https://img.icons8.com/pastel-glyph/25/000000/minus--v2.png"/></button>
+                 {{item.quantity}}
+                <button class="btn" (click)= "updateProductQuantity(item.id,item.productname,1)"><img src="https://img.icons8.com/pastel-glyph/25/000000/plus--v2.png"/></button>
+            </th>
+            <th >{{item.price}}</th>
+            <th><button class="btn" (click)="deletingProduct(item.id)"><i class="fas fa-trash-alt"></i> delete item</button></th>
+        </tr>
+        <tr class="text-center text-muted ">
+            <th>total:</th>
+            <th>100</th>
+            <th  > <button class="btn"><i class="fas fa-comment-dollar"></i>proceed to pay</button></th>
+            <th  > <button class="btn"><i class="fas fa-hand-holding-heart"></i>donate your cart</button></th>
+            <th  > <button class="btn"><i class="fas fa-shopping-cart"></i>back to shopping</button></th>
+            
+        </tr>
+    </tbody>
+</table>
+
+</div>
